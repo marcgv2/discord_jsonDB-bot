@@ -4,11 +4,13 @@
 ## Follow these steps to set up and run your Discord bot:
 Prerequisites
 
-  > Node.js (version 16.9.0 or higher)
+> Node.js (version 16.9.0 or higher)
+>
+> A Discord account with a registered bot application
+>
+> Basic terminal/command line knowledge
 > 
-  > A Discord account with a registered bot application
-> 
-  > Basic terminal/command line knowledge
+> Basic js knowledge in case of wanting to modify
 
 ### 📋 Step-by-Step Installation
 ## Step 1: Install Node.js
@@ -28,9 +30,16 @@ Prerequisites
 # Clone or download the project files to your computer:
 ```bash
 
-# Using gh
+# Using GitHub CLI (recommended)
 gh repo clone marcgv2/discord_bot
-cd <project-folder>
+cd discord_bot
+
+# Or using Git directly:
+git clone https://github.com/marcgv2/discord_bot.git
+cd discord_bot
+
+# Or download ZIP from GitHub and extract it
+
 ```
 ### Or download ZIP and extract
 
@@ -43,6 +52,7 @@ npm install
 ```
 
 This will install all necessary packages listed in package.json.
+- note it uses discord.js 14.24.1 to work correctly, other versions may work but it's not guaranteed
 ## Step 4: Configure Environment Variables
 
 Create a .env file in the root directory of your project:
@@ -71,34 +81,54 @@ Where to find these values:
         Enable Developer Mode in Discord settings
 
         Right-click your server → Copy ID
-        
+
 ## Step 5: Run the Bot
 
 Start your Discord bot with:
 ```bash
 
-npm start
+npm start      # Production mode
 # or
-node index.js
+node index.js  # Direct node execution
 ```
 
-# 📚 Useful Commands
-```bash
+# Useful Commands
+- `npm start` 
+  - start the bot in production mode
+- `npm run dev` 
+  - npm run dev
+- `npm list` 
+  - Check installed packages.
+- `npm audit fix` 	
+  - Fix security vulnerabilities.
 
-# Development
-npm start          # Start the bot
-npm run dev        # Start with nodemon (if configured)
-
-# Troubleshooting
-npm list           # Check installed packages
-npm audit fix      # Fix security vulnerabilities
-```
 # Security Notes
 
-    Never share your .env file or bot token
+- Never share your .env file or bot token
+- Add .env to your .gitignore file
+- Regularly update dependencies: `npm update`
+- Use a process manager like PM2 for production
 
-    Add .env to your .gitignore file
+# Common issues
 
-    Regularly update dependencies: npm update
+| Issue                                      | Solution                                                            |
+|--------------------------------------------|---------------------------------------------------------------------|
+| Bot doesn't respond to commands            | Check if `GUILD_ID` is correct or set to `null` for global commands |
+| Getting "Missing Permissions" errors       | Ensure bot has proper permissions in server settings                |
+| Node.js version too old                    | Update Node.js using the [installer](https://nodejs.org/) or via package manager       |
+| Dependencies not installing                | Run `npm cache clean --force` then retry `npm install`              |
 
-    Use a process manager like PM2 for production
+
+# Important
+
+when running `npm audit fix` do not update discordjs or related packets unless you know what you're doing as it may break the bot
+
+## Attribution Request
+
+Please credit me ([@marcgv2](https://github.com/marcgv2)) if you use or modify this bot. A link to [this repository](https://github.com/marcgv2/discord_jsonDB-bot) would be greatly appreciated.
+
+*Optional*: Contributions (e.g., pull requests) are welcome!
+
+### Official documentation for this specific verson may be found here
+
+[discord.js](https://discord.js.org/docs/packages/discord.js/14.25.1)

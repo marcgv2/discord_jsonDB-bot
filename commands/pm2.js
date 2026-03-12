@@ -7,13 +7,14 @@ module.exports = {
         .setDescription('see dev dashboard link'),
 
         async execute(interaction) {
-            await interaction.reply('pm2 dashboard [here](https://app.pm2.io/bucket/68a47f8e5c8ecb404596fde2/backend/overview/servers)');
-            await interaction.followUp('-# dev only');
+            await interaction.reply('pm2 dashboard [here](https://app.pm2.io/bucket/68a47f8e5c8ecb404596fde2/backend/overview/servers)'); // change to your if using
+            await interaction.reply({content: "-# dev only",
+                                    ephemeral: true});
             // logging
             try {
 
                 await logger.log('pm2', interaction.user, {
-                    response: 'pm2 dashboard [here](https://app.pm2.io/bucket/68a47f8e5c8ecb404596fde2/backend/overview/servers) -# dev only'
+                    response: 'pm2 dashboard [here](https://app.pm2.io/bucket/68a47f8e5c8ecb404596fde2/backend/overview/servers) -# dev only' // change here too
                 })
             } catch (error) {
                 console.error('Error logging pm2 command:', error);

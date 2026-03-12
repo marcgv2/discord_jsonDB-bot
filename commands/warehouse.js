@@ -78,16 +78,15 @@ module.exports = {
                 response += `\n...and ${filteredItems.length - 15} more positions`;
             }
 
+            itemQuery || locationQuery
+                ? response += `\n **Search Results:**`
+                : response += `\n Displaying ${filteredItems.length} warehouse positions`;
             const embed = new EmbedBuilder()
                 .setColor('#0099ff')
                 .setTitle('Warehouse Position Tracking')
                 .setDescription(response)
                 .setTimestamp()
-                .setFooter({ 
-                    text: itemQuery || locationQuery 
-                        ? 'Search results' 
-                        : `Displaying ${filteredItems.length} warehouse positions` 
-                });
+                .setFooter({ text: `made by marcgv2 on GitHub` }) // please do not remove credits
 
             await interaction.reply({ embeds: [embed] });
 

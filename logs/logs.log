@@ -1,12 +1,12 @@
-19-08-2025 13:55:59 UTC-1 - marcgv2 (754699798287745085)
-warehouse command used; parameters:
-item: none, position: none, results_count: 3 
+12-03-2026 18:41:43 UTC-1 - marcgv2 (754699798287745085)
+pm2 command used; parameters:
+response: pm2 dashboard [here](https://app.pm2.io/bucket/68a47f8e5c8ecb404596fde2/backend/overview/servers) -# dev only 
 -------------------------------------------------------------
-19-08-2025 14:17:22 UTC-1 - marcgv2 (754699798287745085)
-warehouse_add command used; parameters:
-item: something, position: Z3 
+12-03-2026 18:48:27 UTC-1 - marcgv2 (754699798287745085)
+shutdown command used; parameters:
+response: shutdown initiated 
 -------------------------------------------------------------
-19-08-2025 14:17:47 UTC-1 - marcgv2 (754699798287745085)
-warehouse_remove command used; parameters:
-item: something, locaton: none 
+12-03-2026 18:49:50 UTC-1 - marcgv2 (754699798287745085)
+shutdown command used; parameters:
+response: shutdown initiated 
 -------------------------------------------------------------

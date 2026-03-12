@@ -18,7 +18,7 @@ module.exports = {
             logger.log('shutdown', interaction.user, {
                 response: 'shutdown initiated'
             })
-            const pm2AppName = process.env.PM2_APP_NAME || 'gayland_bot';
+            const pm2AppName = process.env.PM2_APP_NAME || 'discord_bot';
             
             // Execute PM2 stop command
             exec(`pm2 stop ${pm2AppName}`, (error, stdout, stderr) => {
