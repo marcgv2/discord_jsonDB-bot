@@ -28,8 +28,8 @@ Prerequisites
 # Clone or download the project files to your computer:
 ```bash
 
-# Using Git
-git clone <your-repository-url>
+# Using gh
+gh repo clone marcgv2/discord_bot
 cd <project-folder>
 ```
 ### Or download ZIP and extract
