@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
+    "prod:start": "pm2-runtime app.js", 
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
